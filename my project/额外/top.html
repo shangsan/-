@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			a{
+				text-decoration: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<table border="0" width="100%" height="150" cellpadding="0" cellspacing="0">
+			<tr height="108" background="images/ny_top_img_bg.gif">
+				<td colspan="4"><img src="images/ny_top_img.gif" /></td>
+			</tr>
+			<tr>
+				<td>当前位置：所有用户管理</td>
+				<td>
+					<marquee behavior="alternate" loop="-1">欢迎您，闫斌</marquee>
+				</td>
+				<td id="timeTd"></td>
+				<td>
+					<a href="divlogin.html" target="_top">退出</a>
+				</td>
+			</tr>
+		</table>
+		<script type="text/javascript">
+			function getTimeString () {
+				var now = new Date();
+			var year = now.getFullYear();
+			var month = now.getMonth() + 1;
+			var day = now.getDate();
+			var hour = now.getHours();
+			var minute = now.getMinutes();
+			var second = now.getSeconds();
+			var timestring = year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second;
+			return timestring;
+			}
+			
+			var oTimeTd = document.getElementById("timeTd");
+			oTimeTd.innerHTML = getTimeString();
+			setInterval(function(){
+				oTimeTd.innerHTML = getTimeString();
+			},1000);
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			table{margin: 0;}
+		</style>
+	</head>
+	<body>
+		<table width="933" height="412" border="1" background="../images/bg_img1.jpg" align="center" valign="center">
+			<tr>
+				<td width="556px">&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>
+					<table border="1" width="359">
+						<tr>
+							<td>用户名</td>
+							<td><form action="login.jsp" method="get">
+								<input type="text" id="usernamebox"/>
+							</form></td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td>密码：</td>
+							<td>
+								<form action="login.jsp" method="get">
+								<input type="password"  id="passwordbox" />
+							</form>
+							</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td>验证码：</td>
+							<td>
+								<form action="login.jsp" method="get">
+								<input type="password" />
+							</form><br />
+							<form>
+								<input type="checkbox" />自动登录
+							</form>
+							</td>
+							<td>刷新</td>
+							<td background="../images/yzm.bmp"></td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td><input type="button" name="登录" value="登录" /></td>
+							<td><input type="button" name="注册" value="注册" /></td>
+							<td>&nbsp;</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+		</table>
+			<script>
+			function f_validate(){
+				var oUserameBox=document.getElementById("usernamebox");
+				var username=oUserameBox.value;
+				var oPswBox=document.getElementById("passwordbox");
+			    var passwordStr = oPswBox.value;
+			if (username=="") {
+				alert("请输入用户名")
+				return false;
+			}
+			if(username.length < 6 || username.length > 12){
+				alert("用户名应该在6到12位之间");
+				return false;
+				
+			}
+			if(passwordStr==""){
+				alert("请输入密码");
+				return false;
+			}
+			return true;
+		}
+		</script>
+	</body>
+</html>
